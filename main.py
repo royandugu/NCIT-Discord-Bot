@@ -10,7 +10,7 @@ client=discord.Client(intents=discord.Intents.default())
 
 @client.event
 async def on_ready():
-    print(f"Logged in as {format(client)}")
+    print("The bot has logged in")
 
 @client.event
 async def on_message(message):
