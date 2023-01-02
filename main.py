@@ -14,6 +14,22 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    print(message)
+    authorName=message.author #The one who sent the message
+    channelName=message.channel #The channel name where they are typing
+    content=message.content #The messsage content (currently empty)
 
+    if authorName == client.user: #Making sure the bot doesn't reply to itself 
+        return 
+    
+    print(conte)
+    if (content.lower() == "hi" or content.lower() == "hello"):
+        await message.channel.send(f"Hello {authorName}")
+    elif (content.lower() == "bye"):
+        await message.channel.send(f"Bye {authorName}")
+    else:
+        await message.channel.send("I don't understand you cause I am dumb")
+    
+    print(f"{authorName} has messaged in {channelName}")
+
+    
 client.run(TOKEN)
