@@ -1,7 +1,9 @@
 # Dependencies
 1. discord (obviously)
 2. python-dotenv
-3. selenium (for web scrapping)
+3. requests (make HTTP get request)
+4. html5lib
+6. bs4 (BeautifulSoup)
 
 
 ## Note

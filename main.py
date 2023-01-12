@@ -1,15 +1,17 @@
 import os
 import discord
+import requests
 
-import selenium.webdriver as webdriver
-from selenium.webdriver.edge.service import Service
-from selenium.webdriver.edge.options import Options
-
+from bs4 import BeautifulSoup
 from dotenv import load_dotenv 
 
+#Fetching token and setting up the bot as client
 load_dotenv()
 TOKEN = os.getenv('TOKEN')
 client=discord.Client(intents=discord.Intents.default()) 
+
+#Scrape sight
+url="https://ncit.edu.np/news"
 
 
 #Paremeters
@@ -45,6 +47,10 @@ async def on_message(message):
     
     print(f"{authorName} has messaged in {channelName}")
 
-    
+# @tasks.loop(seconds=10) //Here we will scrap like scrap every 10 seconds or so
+# async def loop():
+#     print("I'm running!")
+#     # your repetitive task
+
+
 client.run(TOKEN)
-browser.quit()
