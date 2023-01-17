@@ -1,28 +1,16 @@
 import os
 import discord
-import requests
 
-from bs4 import BeautifulSoup
 from dotenv import load_dotenv 
 
 #Fetching token and setting up the bot as client
 load_dotenv()
-TOKEN = os.getenv('TOKEN')
+TOKEN = os.getenv('TOKEN') #GRAPH API user-Acess token
 client=discord.Client(intents=discord.Intents.default()) 
 
 #Scrape sight
-url="https://ncit.edu.np/news"
 
 
-#Paremeters
-user_agent=os.getenv('USER_AGENT')
-driver_path="msedgedriver.exe"
-edge_service=Service(driver_path) #A class that is responsible for starting and stopping the msedgedriver
-edge_options=Options() #initialization
-edge_options.add_argument(f'user-agent:{user_agent}')
-
-#Loading the browser
-#browser.get("https://ncit.edu.np/news")
 
 @client.event
 async def on_ready():

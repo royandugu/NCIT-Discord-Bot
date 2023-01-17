@@ -1,10 +1,9 @@
 # Dependencies
 1. discord (obviously)
 2. python-dotenv
-3. requests (make HTTP get request)
-4. html5lib
-6. bs4 (BeautifulSoup)
 
+# Tools
+Facebook GRAPH API
 
 ## Note
 1. Learn about this intents thingy
