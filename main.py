@@ -8,10 +8,6 @@ load_dotenv()
 TOKEN = os.getenv('TOKEN') #GRAPH API user-Acess token
 client=discord.Client(intents=discord.Intents.default()) 
 
-#Scrape sight
-
-
-
 @client.event
 async def on_ready():
     print("The bot has logged in")    
